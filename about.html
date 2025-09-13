@@ -4,130 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於律師 - 專業法律服務</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lawyer-gold': '#D4AF37',
+                        'lawyer-navy': '#1B2B4D',
+                        'lawyer-gray': '#4A5568'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">法律專家</div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="about.html" class="active">關於律師</a></li>
-                    <li><a href="contact.html">聯絡我們</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="about-hero">
-            <div class="container">
-                <h1>關於律師</h1>
-                <p>了解我的專業背景、執業經驗與服務理念</p>
-            </div>
-        </section>
-
-        <section class="about-content">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h2>專業背景</h2>
-                        <p>本人為執業超過15年的資深律師，畢業於國立台灣大學法律學系，並取得法學碩士學位。專精於民事訴訟、商業法務及不動產法律事務。</p>
-                        <p>秉持著「以客為尊、專業至上」的服務理念，致力於為每位委託人提供最優質的法律服務，並以維護當事人權益為最高宗旨。</p>
-
-                        <h3>專業資格</h3>
-                        <div class="credentials">
-                            <span class="credential-tag">律師執業證書</span>
-                            <span class="credential-tag">仲裁人資格</span>
-                            <span class="credential-tag">調解委員</span>
-                            <span class="credential-tag">法學碩士</span>
-                            <span class="credential-tag">商事法專家</span>
-                            <span class="credential-tag">不動產專業律師</span>
-                        </div>
-
-                        <h3>執業理念</h3>
-                        <ul class="philosophy">
-                            <li>✓ 誠信為本，專業服務</li>
-                            <li>✓ 維護當事人合法權益</li>
-                            <li>✓ 提供全方位法律解決方案</li>
-                            <li>✓ 持續進修，與時俱進</li>
-                        </ul>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-lawyer-navy tracking-wide">
+                        ⚖️ 法律專家
                     </div>
-                    <div class="about-image">
-                        <div class="profile-placeholder lawyer-profile">
-                            <img src="lawyer-photo.jpg" alt="律師專業照片" class="lawyer-photo-about">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-lawyer-gray hover:text-lawyer-gold transition-colors duration-300 px-3 py-2 rounded-md text-sm">首頁</a>
+                        <a href="about.html" class="text-lawyer-gold font-semibold px-3 py-2 rounded-md text-sm">關於律師</a>
+                        <a href="contact.html" class="text-lawyer-gray hover:text-lawyer-gold transition-colors duration-300 px-3 py-2 rounded-md text-sm">聯絡我們</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-20 bg-gradient-to-br from-lawyer-navy to-gray-900">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                 alt="Law Library" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">關於律師</h1>
+                <div class="w-24 h-1 bg-lawyer-gold mx-auto mb-8"></div>
+                <p class="text-xl md:text-2xl text-gray-200 leading-relaxed">了解我的專業背景、執業經驗與服務理念</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <h2 class="text-4xl font-bold text-lawyer-navy mb-6">專業背景</h2>
+                    <div class="w-16 h-1 bg-lawyer-gold mb-6"></div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        本人為執業超過15年的資深律師，畢業於國立台灣大學法律學系，並取得法學碩士學位。專精於民事訴訟、商業法務及不動產法律事務。
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        秉持著「以客為尊、專業至上」的服務理念，致力於為每位委託人提供最優質的法律服務，並以維護當事人權益為最高宗旨。
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-lawyer-navy mb-4">專業資格</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-lawyer-navy text-white px-4 py-2 rounded-full text-sm">律師執業證書</span>
+                        <span class="bg-lawyer-navy text-white px-4 py-2 rounded-full text-sm">仲裁人資格</span>
+                        <span class="bg-lawyer-navy text-white px-4 py-2 rounded-full text-sm">調解委員</span>
+                        <span class="bg-lawyer-navy text-white px-4 py-2 rounded-full text-sm">法學碩士</span>
+                        <span class="bg-lawyer-navy text-white px-4 py-2 rounded-full text-sm">商事法專家</span>
+                        <span class="bg-lawyer-navy text-white px-4 py-2 rounded-full text-sm">不動產專業律師</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-lawyer-navy mb-4">執業理念</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-lawyer-gold rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg text-gray-700">誠信為本，專業服務</span>
                         </div>
-                        <div class="certifications">
-                            <h4>專業認證</h4>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-lawyer-gold rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg text-gray-700">維護當事人合法權益</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-lawyer-gold rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg text-gray-700">提供全方位法律解決方案</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-lawyer-gold rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <span class="text-lg text-gray-700">持續進修，與時俱進</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                             alt="律師專業照片" class="w-80 h-96 mx-auto rounded-lg shadow-2xl object-cover border-4 border-lawyer-gold">
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold text-lawyer-navy mb-4">專業認證</h4>
+                        <div class="space-y-2 text-gray-600">
                             <p>中華民國律師公會會員</p>
                             <p>台北律師公會理事</p>
                             <p>商事仲裁協會仲裁人</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="experience">
-                    <h3>執業經歷</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-date">2020 - 現在</div>
-                            <div class="timeline-content">
-                                <h4>主持律師</h4>
-                                <p>成立個人事務所，專精商事法務、不動產交易及民事訴訟，累積處理案件超過500件</p>
+    <!-- Experience Timeline -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-lawyer-navy mb-4">執業經歷</h2>
+                <div class="w-24 h-1 bg-lawyer-gold mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600">多年執業經驗，專業值得信賴</p>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-lawyer-gold"></div>
+
+                <div class="space-y-12">
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="text-lawyer-gold font-bold text-lg mb-2">2020 - 現在</div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">主持律師</h3>
+                                <p class="text-gray-600">成立個人事務所，專精商事法務、不動產交易及民事訴訟，累積處理案件超過500件</p>
                             </div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2015 - 2020</div>
-                            <div class="timeline-content">
-                                <h4>合夥律師</h4>
-                                <p>於知名聯合律師事務所擔任合夥律師，主要負責企業法務及重大民事案件</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2010 - 2015</div>
-                            <div class="timeline-content">
-                                <h4>執業律師</h4>
-                                <p>於大型律師事務所擔任執業律師，累積豐富的訴訟經驗及法務處理能力</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2008 - 2010</div>
-                            <div class="timeline-content">
-                                <h4>司法官訓練</h4>
-                                <p>完成司法官訓練，通過律師考試，開始法律職業生涯</p>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-lawyer-gold border-4 border-white rounded-full shadow"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-lawyer-gold border-4 border-white rounded-full shadow"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="text-lawyer-gold font-bold text-lg mb-2">2015 - 2020</div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">合夥律師</h3>
+                                <p class="text-gray-600">於知名聯合律師事務所擔任合夥律師，主要負責企業法務及重大民事案件</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="achievements">
-                    <h3>專業成就</h3>
-                    <div class="achievement-grid">
-                        <div class="achievement-item">
-                            <div class="achievement-number">500+</div>
-                            <div class="achievement-text">成功處理案件</div>
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="text-lawyer-gold font-bold text-lg mb-2">2010 - 2015</div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">執業律師</h3>
+                                <p class="text-gray-600">於大型律師事務所擔任執業律師，累積豐富的訴訟經驗及法務處理能力</p>
+                            </div>
                         </div>
-                        <div class="achievement-item">
-                            <div class="achievement-number">95%</div>
-                            <div class="achievement-text">客戶滿意度</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-number">15+</div>
-                            <div class="achievement-text">執業年資</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-number">24/7</div>
-                            <div class="achievement-text">緊急服務</div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-lawyer-gold border-4 border-white rounded-full shadow"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-lawyer-gold border-4 border-white rounded-full shadow"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="text-lawyer-gold font-bold text-lg mb-2">2008 - 2010</div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">司法官訓練</h3>
+                                <p class="text-gray-600">完成司法官訓練，通過律師考試，開始法律職業生涯</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 專業律師事務所. 保留所有權利.</p>
+    <!-- Achievements -->
+    <section class="py-20 bg-lawyer-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">專業成就</h2>
+                <div class="w-24 h-1 bg-lawyer-gold mx-auto mb-8"></div>
+                <p class="text-xl text-gray-300">用數字證明我們的專業實力</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl font-bold text-lawyer-gold mb-2">500+</div>
+                    <div class="text-white text-lg">成功處理案件</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl font-bold text-lawyer-gold mb-2">95%</div>
+                    <div class="text-white text-lg">客戶滿意度</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl font-bold text-lawyer-gold mb-2">15+</div>
+                    <div class="text-white text-lg">執業年資</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl font-bold text-lawyer-gold mb-2">24/7</div>
+                    <div class="text-white text-lg">緊急服務</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-lawyer-navy mb-6">準備開始合作了嗎？</h2>
+            <p class="text-xl text-gray-600 mb-8">立即聯絡我們，獲得專業的法律諮詢服務</p>
+            <div class="space-x-4">
+                <a href="contact.html" class="inline-block bg-lawyer-gold text-lawyer-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    免費諮詢
+                </a>
+                <a href="tel:0912345678" class="inline-block border-2 border-lawyer-navy text-lawyer-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-lawyer-navy hover:text-white transition-all duration-300">
+                    緊急專線
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-lawyer-gold mb-4">⚖️ 法律專家</div>
+                    <p class="text-gray-400">專業法律服務，值得信賴的選擇</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速連結</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-lawyer-gold transition-colors">首頁</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-lawyer-gold transition-colors">聯絡我們</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-lawyer-gold transition-colors">服務項目</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">聯絡資訊</h3>
+                    <p class="text-gray-400 mb-2">電話: (02) 2345-6789</p>
+                    <p class="text-gray-400 mb-2">緊急: 0912-345-678</p>
+                    <p class="text-gray-400">地址: 台北市中正區重慶南路一段122號8樓之3</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 專業律師事務所. 保留所有權利.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

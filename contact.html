@@ -4,97 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯絡我們 - 專業法律服務</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lawyer-gold': '#D4AF37',
+                        'lawyer-navy': '#1B2B4D',
+                        'lawyer-gray': '#4A5568'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">法律專家</div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="about.html">關於律師</a></li>
-                    <li><a href="contact.html" class="active">聯絡我們</a></li>
-                </ul>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-lawyer-navy tracking-wide">
+                        ⚖️ 法律專家
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-lawyer-gray hover:text-lawyer-gold transition-colors duration-300 px-3 py-2 rounded-md text-sm">首頁</a>
+                        <a href="about.html" class="text-lawyer-gray hover:text-lawyer-gold transition-colors duration-300 px-3 py-2 rounded-md text-sm">關於律師</a>
+                        <a href="contact.html" class="text-lawyer-gold font-semibold px-3 py-2 rounded-md text-sm">聯絡我們</a>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section class="contact-hero">
-            <div class="container">
-                <h1>聯絡我們</h1>
-                <p>專業法律諮詢，24小時服務熱線</p>
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-20 bg-gradient-to-br from-lawyer-navy to-gray-900">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                 alt="Contact Us" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">聯絡我們</h1>
+                <div class="w-24 h-1 bg-lawyer-gold mx-auto mb-8"></div>
+                <p class="text-xl md:text-2xl text-gray-200 leading-relaxed">專業法律諮詢，24小時服務熱線</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="contact-content">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2>事務所資訊</h2>
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
+    <!-- Contact Content -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-4xl font-bold text-lawyer-navy mb-8">事務所資訊</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-lg">
+                            <div class="text-3xl text-lawyer-gold">📧</div>
                             <div>
-                                <h3>電子郵件</h3>
-                                <p>lawyer@lawfirm.com.tw</p>
-                                <p>info@lawfirm.com.tw</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h3>聯絡電話</h3>
-                                <p>辦公室: (02) 2345-6789</p>
-                                <p>緊急專線: 0912-345-678</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h3>事務所地址</h3>
-                                <p>台北市中正區重慶南路一段122號</p>
-                                <p>8樓之3 (近台北車站)</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">⏰</div>
-                            <div>
-                                <h3>服務時間</h3>
-                                <p>週一至週五: 9:00 - 18:00</p>
-                                <p>週六: 9:00 - 12:00</p>
-                                <p>緊急法律問題: 24小時</p>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">電子郵件</h3>
+                                <p class="text-gray-600 mb-1">lawyer@lawfirm.com.tw</p>
+                                <p class="text-gray-600">info@lawfirm.com.tw</p>
                             </div>
                         </div>
 
-                        <div class="emergency-notice">
-                            <h3>🚨 緊急法律協助</h3>
-                            <p>如遇緊急法律問題，請直接撥打緊急專線，我們將立即為您提供協助。</p>
-                            <a href="tel:0912345678" class="emergency-btn">緊急專線 0912-345-678</a>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-lg">
+                            <div class="text-3xl text-lawyer-gold">📞</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">聯絡電話</h3>
+                                <p class="text-gray-600 mb-1">辦公室: (02) 2345-6789</p>
+                                <p class="text-gray-600">緊急專線: 0912-345-678</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-lg">
+                            <div class="text-3xl text-lawyer-gold">📍</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">事務所地址</h3>
+                                <p class="text-gray-600 mb-1">台北市中正區重慶南路一段122號</p>
+                                <p class="text-gray-600">8樓之3 (近台北車站)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-lg">
+                            <div class="text-3xl text-lawyer-gold">⏰</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-lawyer-navy mb-2">服務時間</h3>
+                                <p class="text-gray-600 mb-1">週一至週五: 9:00 - 18:00</p>
+                                <p class="text-gray-600 mb-1">週六: 9:00 - 12:00</p>
+                                <p class="text-gray-600">緊急法律問題: 24小時</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🚨 緊急法律協助</h3>
+                            <p class="mb-4">如遇緊急法律問題，請直接撥打緊急專線，我們將立即為您提供協助。</p>
+                            <a href="tel:0912345678" class="inline-block bg-white bg-opacity-20 border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-red-600 transition-all duration-300">
+                                緊急專線 0912-345-678
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="contact-form">
-                        <h2>免費法律諮詢</h2>
-                        <p class="form-subtitle">填寫以下表單，我們將於24小時内回覆您</p>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group half">
-                                    <label for="name">姓名 *</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group half">
-                                    <label for="phone">聯絡電話 *</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-4xl font-bold text-lawyer-navy mb-4">免費法律諮詢</h2>
+                    <p class="text-gray-600 mb-8 italic">填寫以下表單，我們將於24小時内回覆您</p>
+
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">姓名 *</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lawyer-gold focus:border-transparent transition-all duration-300">
                             </div>
-                            <div class="form-group">
-                                <label for="email">電子郵件 *</label>
-                                <input type="email" id="email" name="email" required>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">聯絡電話 *</label>
+                                <input type="tel" id="phone" name="phone" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lawyer-gold focus:border-transparent transition-all duration-300">
                             </div>
-                            <div class="form-group">
-                                <label for="case-type">案件類型</label>
-                                <select id="case-type" name="case-type">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">電子郵件 *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lawyer-gold focus:border-transparent transition-all duration-300">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="case-type" class="block text-sm font-medium text-gray-700 mb-2">案件類型</label>
+                                <select id="case-type" name="case-type"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lawyer-gold focus:border-transparent transition-all duration-300">
                                     <option value="">請選擇案件類型</option>
                                     <option value="civil">民事訴訟</option>
                                     <option value="business">商業法務</option>
@@ -104,53 +150,137 @@
                                     <option value="consultation">一般法律諮詢</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="urgency">緊急程度</label>
-                                <select id="urgency" name="urgency">
+                            <div>
+                                <label for="urgency" class="block text-sm font-medium text-gray-700 mb-2">緊急程度</label>
+                                <select id="urgency" name="urgency"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lawyer-gold focus:border-transparent transition-all duration-300">
                                     <option value="normal">一般諮詢</option>
                                     <option value="urgent">緊急(3天内)</option>
                                     <option value="emergency">非常緊急(24小時内)</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="message">案件說明 *</label>
-                                <textarea id="message" name="message" rows="6" placeholder="請詳細說明您的法律問題，我們將提供專業建議..." required></textarea>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <label>
-                                    <input type="checkbox" required>
-                                    我同意事務所蒐集、處理及利用個人資料用於法律諮詢服務
-                                </label>
-                            </div>
-                            <button type="submit" class="submit-button">提交諮詢申請</button>
-                        </form>
-                    </div>
-                </div>
+                        </div>
 
-                <div class="office-map">
-                    <h2>事務所位置</h2>
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <p>📍 Google Maps 位置</p>
-                            <p>台北市中正區重慶南路一段122號8樓之3</p>
-                            <p>(近台北車站，交通便利)</p>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">案件說明 *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                placeholder="請詳細說明您的法律問題，我們將提供專業建議..."
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lawyer-gold focus:border-transparent transition-all duration-300"></textarea>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" id="consent" required
+                                class="h-4 w-4 text-lawyer-gold focus:ring-lawyer-gold border-gray-300 rounded">
+                            <label for="consent" class="ml-2 block text-sm text-gray-600">
+                                我同意事務所蒐集、處理及利用個人資料用於法律諮詢服務
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-lawyer-gold text-lawyer-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            提交諮詢申請
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Location -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-lawyer-navy mb-4">事務所位置</h2>
+                <div class="w-24 h-1 bg-lawyer-gold mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600">交通便利，近台北車站</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="bg-gray-200 h-96 rounded-lg shadow-lg flex items-center justify-center border-2 border-dashed border-gray-400">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">📍</div>
+                            <h3 class="text-xl font-bold text-gray-600 mb-2">Google Maps 位置</h3>
+                            <p class="text-gray-500 mb-2">台北市中正區重慶南路一段122號8樓之3</p>
+                            <p class="text-gray-500">(近台北車站，交通便利)</p>
                         </div>
                     </div>
-                    <div class="transport-info">
-                        <h3>交通資訊</h3>
-                        <ul>
-                            <li><strong>捷運:</strong> 台北車站 (板南線/淡水信義線) 步行5分鐘</li>
-                            <li><strong>公車:</strong> 多路線經過重慶南路</li>
-                            <li><strong>開車:</strong> 附近有多個付費停車場</li>
-                        </ul>
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-10 rounded-lg"></div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-lawyer-navy mb-6">交通資訊</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-lawyer-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">🚇</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lawyer-navy">捷運</h4>
+                                    <p class="text-gray-600">台北車站 (板南線/淡水信義線) 步行5分鐘</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-lawyer-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">🚌</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lawyer-navy">公車</h4>
+                                    <p class="text-gray-600">多路線經過重慶南路，交通便利</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-lawyer-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">🚗</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lawyer-navy">開車</h4>
+                                    <p class="text-gray-600">附近有多個付費停車場</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-bold text-lawyer-navy mb-4">預約訪問</h4>
+                        <p class="text-gray-600 mb-4">建議您在來訪前先電話預約，確保律師有充足時間為您服務。</p>
+                        <a href="tel:0223456789" class="inline-block bg-lawyer-navy text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300">
+                            立即預約 (02) 2345-6789
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 專業律師事務所. 保留所有權利.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-lawyer-gold mb-4">⚖️ 法律專家</div>
+                    <p class="text-gray-400">專業法律服務，值得信賴的選擇</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速連結</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-lawyer-gold transition-colors">首頁</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-lawyer-gold transition-colors">關於律師</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-lawyer-gold transition-colors">服務項目</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">聯絡資訊</h3>
+                    <p class="text-gray-400 mb-2">電話: (02) 2345-6789</p>
+                    <p class="text-gray-400 mb-2">緊急: 0912-345-678</p>
+                    <p class="text-gray-400">地址: 台北市中正區重慶南路一段122號8樓之3</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 專業律師事務所. 保留所有權利.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

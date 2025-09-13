@@ -39,7 +39,9 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #1a252f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -57,7 +59,7 @@ header {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: #3498db;
+    color: #c0392b;
 }
 
 main {
@@ -65,38 +67,70 @@ main {
 }
 
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
     color: white;
-    padding: 100px 0;
-    text-align: center;
+    padding: 120px 0;
+    position: relative;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.lawyer-photo {
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 5px solid rgba(255,255,255,0.1);
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
+.hero-text p {
+    font-size: 1.3rem;
     margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.6;
 }
+
 
 .cta-button {
     display: inline-block;
-    background: #e74c3c;
+    background: #c0392b;
     color: white;
-    padding: 15px 30px;
+    padding: 18px 35px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(192,57,43,0.3);
 }
 
 .cta-button:hover {
-    background: #c0392b;
+    background: #a93226;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(192,57,43,0.4);
 }
 
 .projects {
@@ -342,13 +376,320 @@ footer {
     padding: 20px 0;
 }
 
+/* 律師網站專用樣式 */
+.services,
+.why-choose-us {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.services:nth-child(even) {
+    background: white;
+}
+
+.services h2,
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #1a252f;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid #c0392b;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #1a252f;
+    font-size: 1.3rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-item h3 {
+    color: #1a252f;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #666;
+}
+
+/* 關於頁面專用樣式 */
+.credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.credential-tag {
+    background: #1a252f;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.philosophy {
+    list-style: none;
+    padding: 0;
+}
+
+.philosophy li {
+    padding: 10px 0;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.lawyer-profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lawyer-photo-about {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: 3px solid rgba(26,37,47,0.1);
+}
+
+.certifications {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.certifications h4 {
+    color: #1a252f;
+    margin-bottom: 15px;
+}
+
+.certifications p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.achievements {
+    margin-top: 60px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.achievement-item {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.achievement-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.achievement-text {
+    font-size: 1.1rem;
+}
+
+/* 聯絡頁面專用樣式 */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.emergency-notice {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.emergency-notice h3 {
+    margin-bottom: 15px;
+}
+
+.emergency-btn {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+}
+
+.emergency-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.office-map {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.map-container {
+    margin: 30px 0;
+}
+
+.map-placeholder {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    border-radius: 15px;
+    border: 2px dashed #ddd;
+}
+
+.transport-info {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.transport-info h3 {
+    margin-bottom: 20px;
+    color: #1a252f;
+}
+
+.transport-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transport-info li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transport-info li:last-child {
+    border-bottom: none;
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         gap: 20px;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 320px;
     }
 
     .about-grid,
@@ -357,12 +698,22 @@ footer {
         gap: 30px;
     }
 
-    .project-grid {
+    .project-grid,
+    .services-grid {
         grid-template-columns: 1fr;
     }
 
     .about-hero h1,
     .contact-hero h1 {
         font-size: 2rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

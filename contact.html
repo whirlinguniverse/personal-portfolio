@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我 - 个人作品集</title>
+    <title>聯絡我們 - 專業法律服務</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-container">
-                <div class="logo">作品集</div>
+                <div class="logo">法律專家</div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="about.html">关于</a></li>
-                    <li><a href="contact.html" class="active">联系</a></li>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="about.html">關於律師</a></li>
+                    <li><a href="contact.html" class="active">聯絡我們</a></li>
                 </ul>
             </div>
         </nav>
@@ -23,8 +23,8 @@
     <main>
         <section class="contact-hero">
             <div class="container">
-                <h1>联系我</h1>
-                <p>让我们开始一个精彩的项目合作</p>
+                <h1>聯絡我們</h1>
+                <p>專業法律諮詢，24小時服務熱線</p>
             </div>
         </section>
 
@@ -32,50 +32,117 @@
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <h2>联系方式</h2>
+                        <h2>事務所資訊</h2>
                         <div class="contact-item">
-                            <h3>邮箱</h3>
-                            <p>your.email@example.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>电话</h3>
-                            <p>+86 138 0000 0000</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>地址</h3>
-                            <p>中国，北京</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>社交媒体</h3>
-                            <div class="social-links">
-                                <a href="#" class="social-link">GitHub</a>
-                                <a href="#" class="social-link">LinkedIn</a>
-                                <a href="#" class="social-link">微博</a>
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>電子郵件</h3>
+                                <p>lawyer@lawfirm.com.tw</p>
+                                <p>info@lawfirm.com.tw</p>
                             </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h3>聯絡電話</h3>
+                                <p>辦公室: (02) 2345-6789</p>
+                                <p>緊急專線: 0912-345-678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>事務所地址</h3>
+                                <p>台北市中正區重慶南路一段122號</p>
+                                <p>8樓之3 (近台北車站)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h3>服務時間</h3>
+                                <p>週一至週五: 9:00 - 18:00</p>
+                                <p>週六: 9:00 - 12:00</p>
+                                <p>緊急法律問題: 24小時</p>
+                            </div>
+                        </div>
+
+                        <div class="emergency-notice">
+                            <h3>🚨 緊急法律協助</h3>
+                            <p>如遇緊急法律問題，請直接撥打緊急專線，我們將立即為您提供協助。</p>
+                            <a href="tel:0912345678" class="emergency-btn">緊急專線 0912-345-678</a>
                         </div>
                     </div>
 
                     <div class="contact-form">
-                        <h2>发送消息</h2>
+                        <h2>免費法律諮詢</h2>
+                        <p class="form-subtitle">填寫以下表單，我們將於24小時内回覆您</p>
                         <form>
-                            <div class="form-group">
-                                <label for="name">姓名</label>
-                                <input type="text" id="name" name="name" required>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="name">姓名 *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group half">
+                                    <label for="phone">聯絡電話 *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">邮箱</label>
+                                <label for="email">電子郵件 *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject">主题</label>
-                                <input type="text" id="subject" name="subject" required>
+                                <label for="case-type">案件類型</label>
+                                <select id="case-type" name="case-type">
+                                    <option value="">請選擇案件類型</option>
+                                    <option value="civil">民事訴訟</option>
+                                    <option value="business">商業法務</option>
+                                    <option value="property">不動產法律</option>
+                                    <option value="family">家事法律</option>
+                                    <option value="criminal">刑事辯護</option>
+                                    <option value="consultation">一般法律諮詢</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="message">消息内容</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="urgency">緊急程度</label>
+                                <select id="urgency" name="urgency">
+                                    <option value="normal">一般諮詢</option>
+                                    <option value="urgent">緊急(3天内)</option>
+                                    <option value="emergency">非常緊急(24小時内)</option>
+                                </select>
                             </div>
-                            <button type="submit" class="submit-button">发送消息</button>
+                            <div class="form-group">
+                                <label for="message">案件說明 *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="請詳細說明您的法律問題，我們將提供專業建議..." required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" required>
+                                    我同意事務所蒐集、處理及利用個人資料用於法律諮詢服務
+                                </label>
+                            </div>
+                            <button type="submit" class="submit-button">提交諮詢申請</button>
                         </form>
+                    </div>
+                </div>
+
+                <div class="office-map">
+                    <h2>事務所位置</h2>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <p>📍 Google Maps 位置</p>
+                            <p>台北市中正區重慶南路一段122號8樓之3</p>
+                            <p>(近台北車站，交通便利)</p>
+                        </div>
+                    </div>
+                    <div class="transport-info">
+                        <h3>交通資訊</h3>
+                        <ul>
+                            <li><strong>捷運:</strong> 台北車站 (板南線/淡水信義線) 步行5分鐘</li>
+                            <li><strong>公車:</strong> 多路線經過重慶南路</li>
+                            <li><strong>開車:</strong> 附近有多個付費停車場</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -83,7 +150,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 个人作品集. 保留所有权利.</p>
+        <p>&copy; 2024 專業律師事務所. 保留所有權利.</p>
     </footer>
 </body>
 </html>
